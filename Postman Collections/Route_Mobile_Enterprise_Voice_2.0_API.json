@@ -1,0 +1,82 @@
+{
+  "info": {
+    "_postman_id": "e105069b-3aac-42a4-a42b-d954d43bb809",
+    "name": "Route Mobile Enterprise Voice 2.0 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "https://rmlvoice.rmlconnect.net/webresources/CreateOBDCampaignPost",
+      "_postman_id": "59b22f26-3e9e-4101-a49e-73feee0f54ec",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n     \"sourcetype\": \"0\",\r\n     \"campaigntype\": \"3\",\r\n     \"filetype\": \"2\",\r\n     \"voicefile\": \"Evisage21.wav\",\r\n     \"ukey\": \"AMPERzuY09sXJT9yefg5IusqG\",\r\n     \"serviceno\": \"68523405\",\r\n     \"ivrtemplateid\": \"1\",\r\n     \"retryatmpt\": \"3\",\r\n     \"retryduration\": \"15\",\r\n     \"msisdn\": [\"9824004689\"]\r\n      } ",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://rmlvoice.rmlconnect.net/webresources/CreateOBDCampaignPost",
+        "description": "Simple Voice OBD\n\n\nDescription:\n1. sourcetype : 0:for getting data from <msisdn>,1: for getting data from <tableName> with <connID>,2: for getting data from excel file\n2. campaigntype : 3- Promotional,4- Transactional\n3. filetype : 2(Not to be Changed)\n4. voicefile : Voice File Name\n5. serviceno : Service Number\n6. ivrtemplateid : 1-Simple,2-DTMF,3-Latching and for Custom other\n7. retryatmpt : Retry Attempts\n8. retryduration : Retry Dur. 0=immediate,15 mins,30 mins ,60=1hour\n9. latchagentlist : Agent latch List\n10. latchdialmode : 1 (Not to be changed)\n11. waitdurlatch : Wait duration\n12. latchvoicefile : Latch Voice File Name\n13. respretrylatch : Response Retry\n14. msisdn : Phone No\n15. dtmflength : Max Dtmf Length\n16. waitduration : Maximum Value is 8 Secs\n17. connid : Connection ID of ODBC\n18. tablename : 3rd Party Call ID Table Name\n19. thirdpartycampid : 3rd Party Campaign ID\n20. xlsfilepath : Excel File Path\n21. xlsfilename : Excel File Name\n22. isleaddataincr : true: for incrementing data in provided lead id & false: Default\n23. localleadid : 0: New Campaign & any other for previous\n24. enablesuccessmsg : 0: False, 1: True\n25. successtemplateid : Template ID for Success Message\n26. enablefailuremsg : 0: False, 1: True\n27. failuretemplateid : Template ID for Failure Message\n28. sendnow : 0: true, 1: Schedule Lead\n29. schddate : Date for scheduling(Works only when the value of sendNow is 1)\n29. schddate : Date for scheduling(Works only when the value of sendNow is 1)\n30. isdistributed : true for sending data in desired platforms, false for normal load balancing\n31. platformcsv : Platform IDs in comma separated format\n32. msisdnlist : use for call ID and phoneNo\n[{\"phoneno\":\"98xxxxxxxx\",\"callid\":\"65656\",\"altno1\":\"\",\"altno2\":\"\",\"text1\":\"\",.....}]"
+      },
+      "response": []
+    },
+    {
+      "name": "https://rmlvoice.rmlconnect.net/webresources/CreateOBDCampaignPost",
+      "_postman_id": "95e035ad-e17b-43ba-8e28-767cd7d70efc",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n     \"sourcetype\":\"0\",\r\n     \"campaigntype\":\"4\",\r\n     \"filetype\":\"2\",\r\n     \"voicefile\":\"OBD Feedback Sample Agent Support.mp3\",\r\n     \"ukey\":\"AMPERzuY09sXJT9yefg5IusqG\",\r\n     \"serviceno\":\"68523406\",\r\n     \"ivrtemplateid\":\"2\",\r\n     \"retryatmpt\":2,\r\n     \"retryduration\":0,\r\n     \"dtmflength\":\"2\",\r\n     \"waitduration\":5,\r\n     \"msisdn\":[\"9824004689\"]\r\n \t}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://rmlvoice.rmlconnect.net/webresources/CreateOBDCampaignPost",
+        "description": "OBD Single level DTMF IVR\n\nSuccess Response:\n{\n\"status\":\"success\",\n\"leadid\":2511,\n\"inserted\":1,\n\"rejected\":0,\n\"refno\":[{\"98xxxxxxxx\":\"2511_3204_113229_2018-09-01_154413\"}]\n}\nFailure Response:\n{\n\"status\":\"failure\",\n\"value\":\"ukey is invalid\",\n\"error_code\":\"Error_1010\"\n}\nDescription:\n1. sourcetype : 0:for getting data from <msisdn>,1: for getting data from <tableName> with <connID>,2: for getting data from excel file\n2. campaigntype : 3- Promotional,4- Transactional\n3. filetype : 2(Not to be Changed)\n4. voicefile : Voice File Name\n5. serviceno : Service Number\n6. ivrtemplateid : 1-Simple,2-DTMF,3-Latching and for Custom other\n7. retryatmpt : Retry Attempts\n8. retryduration : Retry Dur. 0=immediate,15 mins,30 mins ,60=1hour\n9. latchagentlist : Agent latch List\n10. latchdialmode : 1 (Not to be changed)\n11. waitdurlatch : Wait duration\n12. latchvoicefile : Latch Voice File Name\n13. respretrylatch : Response Retry\n14. msisdn : Phone No\n15. dtmflength : Max Dtmf Length\n16. waitduration : Maximum Value is 8 Secs\n17. connid : Connection ID of ODBC\n18. tablename : 3rd Party Call ID Table Name\n19. thirdpartycampid : 3rd Party Campaign ID\n20. xlsfilepath : Excel File Path\n21. xlsfilename : Excel File Name\n22. isleaddataincr : true: for incrementing data in provided lead id & false: Default\n23. localleadid : 0: New Campaign & any other for previous\n24. enablesuccessmsg : 0: False, 1: True\n25. successtemplateid : Template ID for Success Message\n25. successtemplateid : Template ID for Success Message\n26. enablefailuremsg : 0: False, 1: True\n27. failuretemplateid : Template ID for Failure Message\n28. sendnow : 0: true, 1: Schedule Lead\n29. schddate : Date for scheduling(Works only when the value of sendNow is 1)\n30. isdistributed : true for sending data in desired platforms, false for normal load balancing\n31. platformcsv : Platform IDs in comma separated format\n32. msisdnlist : use for call ID and phoneNo\n[{\"phoneno\":\"98xxxxxxxx\",\"callid\":\"65656\",\"altno1\":\"\",\"altno2\":\"\",\"text1\":\"\",.....}]"
+      },
+      "response": []
+    },
+    {
+      "name": "https://rmlvoice.rmlconnect.net/webresources/Click2CallPost",
+      "_postman_id": "1e9f3b47-4dae-4653-9a83-991929100b76",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"sourcetype\":\"0\",\r\n        \"customivr\":true,\r\n        \"credittype\":\"2\",\r\n        \"filetype\":\"2\",\r\n        \"ukey\":\"AMPERzuY09sXJT9yefg5IusqG\",\r\n        \"serviceno\":\"68523408\",\r\n        \"ivrtemplateid\":\"183\",\r\n        \"agentretryatmpt\":1,\r\n        \"retryduration\":5,\r\n        \"custretryatmpt\":0,\r\n        \"custcli\":\"68523408\",\r\n        \"isrefno\":false,\r\n        \"msisdnlist\":[{\"phoneno\":\"8097105676\",\"agentno\":\"9824004689\"}]\r\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://rmlvoice.rmlconnect.net/webresources/Click2CallPost",
+        "description": "Click2Call API\n\n1. sourcetype : 0: for getting data from <msisdn>, 1: for getting data from <tableName> with <connID>, 2: for getting data from excel file\n2. credittype : 1- Promotional, 2- Transactional\n3. filetype : 2(Not to be Changed)\n4. voicefile : Voice File Name\n5. serviceno : Service Number\n6. ivrtemplateid : 1-Simple,2-DTMF,3-Latching and for Custom other\n7. retryatmpt : Retry Attempts\n8. retryduration : Retry Dur. 0=immediate,15 mins,30 mins ,60=1hour\n9. latchagentlist : Agent latch List\n10. latchdialmode : 1 (Not to be changed)\n11. waitdurlatch : Wait duration\n12. latchvoicefile : Latch Voice File Name\n13. respretrylatch : Response Retry\n14. msisdn : Phone No\n15. dtmflength : Max Dtmf Length\n16. waitduration : Maximum Value is 8 Secs\n17. connid : Connection ID of ODBC\n18. tablename : 3rd Party Call ID Table Name\n19. thirdpartycampid : 3rd Party Campaign ID\n20. xlsfilepath : Excel File Path\n21. xlsfilename : Excel File Name\n22. isleaddataincr : True: for incremen"
+      },
+      "response": []
+    }
+  ]
+}
