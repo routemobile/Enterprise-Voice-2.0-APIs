@@ -16,7 +16,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": " {\r\n     \"sourcetype\": \"0\",\r\n     \"campaigntype\": \"3\",\r\n     \"filetype\": \"2\",\r\n     \"voicefile\": \"Evisage21.wav\",\r\n     \"ukey\": \"AMPERzuY09sXJT9yefg5IusqG\",\r\n     \"serviceno\": \"68523405\",\r\n     \"ivrtemplateid\": \"1\",\r\n     \"retryatmpt\": \"3\",\r\n     \"retryduration\": \"15\",\r\n     \"msisdn\": [\"9824004689\"]\r\n      } ",
+          "raw": "{\r\n     \"sourcetype\": \"0\",\r\n     \"campaigntype\": \"3\",\r\n     \"filetype\": \"2\",\r\n     \"voicefile\": \"TEST_AUDIO.wav\",\r\n     \"ukey\": \"AUTHKEYXXXX\",\r\n     \"serviceno\": \"02268XXXXXX\",\r\n     \"ivrtemplateid\": \"1\",\r\n     \"retryatmpt\": \"\",\r\n     \"retryduration\": \"15\",\r\n     \"msisdn\": [\"{MOBILE_NO}\"]\r\n      } ",
           "options": {
             "raw": {}
           }
