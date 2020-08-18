@@ -5,9 +5,8 @@ For API Token and registration please contact voicetechsupport@routemobile.com
 ***
 
 ### Onboarding
-Please download and fill the form and send on voicetechsupport@routemobile.com
+Please connect with us at voicetechsupport@routemobile.com
 
-[On-boarding Form]()
 ***
 
 ### Requirement 
